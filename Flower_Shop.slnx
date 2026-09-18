@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Flower_Shop.Api/Flower_Shop.Api.csproj" />
+  <Project Path="Flower_Shop.AppHost/Flower_Shop.AppHost.csproj" />
+  <Project Path="Flower_Shop.ServiceDefaults/Flower_Shop.ServiceDefaults.csproj" />
+</Solution>
