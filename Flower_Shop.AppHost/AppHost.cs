@@ -6,5 +6,4 @@ var clientFrontend = builder.AddViteApp("client-frontend", "../Flower_Shop.Clien
     .WithBun()
     .WithHttpEndpoint(env: "PORT")
     .WithReference(api);
-
 builder.Build().Run();
