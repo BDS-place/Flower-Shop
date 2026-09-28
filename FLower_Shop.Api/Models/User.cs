@@ -1,11 +1,15 @@
 ﻿using Flower_Shop.Api.Enums;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Flower_Shop.Api.Models
 {
-    [Table("users")]
+    /// <summary>
+    /// Сущность пользователя для работы с БД через EF Core.
+    /// Не должна попадать в контроллеры/API-ответы — наружу отдавать через UserDto.
+    /// </summary>
+
     public class User
     {
+        
         public int UserId { get; set; }
         public string Login {  get; set; } = default!;
         public string PasswordHash { get; set; } = default!;
@@ -18,5 +22,7 @@ namespace Flower_Shop.Api.Models
         public UserStatus Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
+
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
     }
 }
